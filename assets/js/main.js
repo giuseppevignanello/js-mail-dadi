@@ -13,23 +13,36 @@ let mails = [
 
 //Ask to user email with a prompt. console.log. 
 
-const userMail = prompt("Qual è la tua mail?");
+// const userMail = prompt("Qual è la tua mail?");
 
-console.log(userMail);
+// console.log(userMail);
+const userMail = document.querySelector ("input")
+
+const resultEl = document.getElementById("result")
+
+const submitEl = document.querySelector("button");
 
 
+
+submitEl.addEventListener("click",
+
+    function () {
+
+       
+        
 // create an if/else to check if the user's mail is contained 
 //If is contained print an access message 
 //else print a deny message 
 // console.log (mail)
-if (mails.includes(userMail)) {
-    console.log("Accesso consentito");
+if (mails.includes(userMail.value)) {
+    resultEl.innerText = "Accesso consentito";
 } else {
-    console.log("Accesso negato")
+    resultEl.innerText = "Accesso negato";
 }
 
+}
 
-
+)
 // Tools
 // -prompt
 // -Array
