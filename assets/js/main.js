@@ -55,3 +55,11 @@ if (mails.includes(userMail.value)) {
 
 //GIOCO DEI DADI
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// Create a button for user random creation
+
+//Add event listener at button 
+    //A const with random user number and random CPU number. console.log both
+    // if User Number > CPU number log User Wins 
+        //else if CPU number > User Number log CPU Wins 
+        // else log tie 
