@@ -58,20 +58,35 @@ if (mails.includes(userMail.value)) {
 
 // Create a button for random creation
 const buttonEl = document.querySelector(".random_button");
-const userNumberEl = document.getElementById("user_number"); 
-const cpuNumberEl = document.getElementById("CPU_number");
+const userSectionEl = document.getElementById("user_section"); 
+const cpuSectionEl = document.getElementById("CPU_section");
+const resultNumberEl = document.getElementById("result_number");
 //Add event listener at button 
 
 buttonEl.addEventListener("click", 
-
+ //A const with random user number and random CPU number. console.log both
 function(){
-    userNumberEl.innerHTML = Math.ceil(Math.random()*6);
-    cpuNumberEl.innerHTML = Math.ceil(Math.random()*6);
 
+    const userNumber = Math.ceil(Math.random()*6);
+
+    userSectionEl.innerHTML = userNumber;
+
+    const cpuNumber = Math.ceil(Math.random()*6);
+    cpuSectionEl.innerHTML = cpuNumber; 
+
+     // if User Number > CPU number log User Wins 
+        //else if CPU number > User Number log CPU Wins 
+        // else log tie 
+   
+    if (userNumber > cpuNumber) {
+        resultNumberEl.innerHTML = "USER WINS";
+    } else if (cpuNumber > userNumber){
+        resultNumberEl.innerHTML = "CPU WINS";
+    } else {
+        resultNumberEl.innerHTML = "TIE, TRY AGAIN";
+    }
 }
 )
 
-    //A const with random user number and random CPU number. console.log both
-    // if User Number > CPU number log User Wins 
-        //else if CPU number > User Number log CPU Wins 
-        // else log tie 
+   
+   
