@@ -16,33 +16,39 @@ let mails = [
 // const userMail = prompt("Qual è la tua mail?");
 
 // console.log(userMail);
-const userMail = document.querySelector ("input")
+const userMail = document.querySelector("input")
 
 const resultEl = document.getElementById("result")
 
 const submitEl = document.querySelector("button");
 
+// create an if/else to check if the user's mail is contained 
+//If is contained print an access message 
+//else print a deny message 
+// console.log (mail)
+// if (mails.includes(userMail.value)) {
+//     resultEl.innerText = "Access allowed";
+// } else {
+//     resultEl.innerText = "Access denied";
+// }
+
+// })
 
 
 submitEl.addEventListener("click",
 
     function () {
 
-       
-        
-// create an if/else to check if the user's mail is contained 
-//If is contained print an access message 
-//else print a deny message 
-// console.log (mail)
-if (mails.includes(userMail.value)) {
-    resultEl.innerText = "Access allowed";
-} else {
-    resultEl.innerText = "Access denied";
-}
+        for (let i = 0; i < mails.length; i++) {
+            let mail = mails[i]
+            if (userMail.value == mail) {
+                console.log("Accesso consentito")
+            } else if (console.log("Negato"));
 
-}
-
+        }
+    }
 )
+
 // Tools
 // -prompt
 // -Array
@@ -58,35 +64,32 @@ if (mails.includes(userMail.value)) {
 
 // Create a button for random creation
 const buttonEl = document.querySelector(".random_button");
-const userSectionEl = document.getElementById("user_section"); 
+const userSectionEl = document.getElementById("user_section");
 const cpuSectionEl = document.getElementById("CPU_section");
 const resultNumberEl = document.getElementById("result_number");
 //Add event listener at button 
 
-buttonEl.addEventListener("click", 
- //A const with random user number and random CPU number. console.log both
-function(){
+buttonEl.addEventListener("click",
+    //A const with random user number and random CPU number. console.log both
+    function () {
 
-    const userNumber = Math.ceil(Math.random()*6);
+        const userNumber = Math.ceil(Math.random() * 6);
 
-    userSectionEl.innerHTML = userNumber;
+        userSectionEl.innerHTML = userNumber;
 
-    const cpuNumber = Math.ceil(Math.random()*6);
-    cpuSectionEl.innerHTML = cpuNumber; 
+        const cpuNumber = Math.ceil(Math.random() * 6);
+        cpuSectionEl.innerHTML = cpuNumber;
 
-     // if User Number > CPU number log User Wins 
+        // if User Number > CPU number log User Wins 
         //else if CPU number > User Number log CPU Wins 
         // else log tie 
-   
-    if (userNumber > cpuNumber) {
-        resultNumberEl.innerHTML = "USER WINS";
-    } else if (cpuNumber > userNumber){
-        resultNumberEl.innerHTML = "CPU WINS";
-    } else {
-        resultNumberEl.innerHTML = "TIE, TRY AGAIN";
-    }
-}
-)
 
-   
-   
+        if (userNumber > cpuNumber) {
+            resultNumberEl.innerHTML = "USER WINS";
+        } else if (cpuNumber > userNumber) {
+            resultNumberEl.innerHTML = "CPU WINS";
+        } else {
+            resultNumberEl.innerHTML = "TIE, TRY AGAIN";
+        }
+    }
+)

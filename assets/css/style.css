@@ -7,9 +7,7 @@ img {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 :root {
     --primary: #EBB80E; 
@@ -17,12 +15,22 @@ a {
     --tertiary: #3DDB96;
 }
 
-/* #region header */
 
+
+/* #region header */
+#app_header a {
+    color: white;
+    text-decoration: none;
+}
 #app_header {
     background-color: var(--secondary);
     height: 80px;
 }
+
+.logo img {
+    width: 100px;
+}
+
 /* #endregion header */
 
 
@@ -34,6 +42,12 @@ a {
 }
 
 .jumbotron {
+    width: 70%;
+    margin: auto;
+    background-color: var(--tertiary);
+}
+
+.dice {
     width: 70%;
     margin: auto;
     background-color: var(--tertiary);
