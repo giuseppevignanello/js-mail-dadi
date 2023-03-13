@@ -56,9 +56,21 @@ if (mails.includes(userMail.value)) {
 //GIOCO DEI DADI
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-// Create a button for user random creation
-
+// Create a button for random creation
+const buttonEl = document.querySelector(".random_button");
+const userNumberEl = document.getElementById("user_number"); 
+const cpuNumberEl = document.getElementById("CPU_number");
 //Add event listener at button 
+
+buttonEl.addEventListener("click", 
+
+function(){
+    userNumberEl.innerHTML = Math.ceil(Math.random()*6);
+    cpuNumberEl.innerHTML = Math.ceil(Math.random()*6);
+
+}
+)
+
     //A const with random user number and random CPU number. console.log both
     // if User Number > CPU number log User Wins 
         //else if CPU number > User Number log CPU Wins 
