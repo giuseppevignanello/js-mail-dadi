@@ -22,6 +22,8 @@ const resultEl = document.getElementById("result")
 
 const submitEl = document.querySelector("button");
 
+const diceEl = document.querySelector(".dice")
+
 // create an if/else to check if the user's mail is contained 
 //If is contained print an access message 
 //else print a deny message 
@@ -50,6 +52,7 @@ submitEl.addEventListener("click",
         if (allowed) {
             resultEl.innerText = "Access allowed";
             resultEl.style.backgroundColor = "green"
+            diceEl.classList.remove("d-none")
         } else {
             resultEl.innerText = "Access denied";
             resultEl.style.backgroundColor ="red"
@@ -75,11 +78,14 @@ const buttonEl = document.querySelector(".random_button");
 const userSectionEl = document.getElementById("user_section");
 const cpuSectionEl = document.getElementById("CPU_section");
 const resultNumberEl = document.getElementById("result_number");
+
 //Add event listener at button 
 
 buttonEl.addEventListener("click",
     //A const with random user number and random CPU number. console.log both
     function () {
+
+       
 
         const userNumber = Math.ceil(Math.random() * 6);
 
