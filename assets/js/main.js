@@ -38,13 +38,21 @@ const submitEl = document.querySelector("button");
 submitEl.addEventListener("click",
 
     function () {
-
+        let allowed = false;
         for (let i = 0; i < mails.length; i++) {
-            let mail = mails[i]
-            if (userMail.value == mail) {
-                console.log("Accesso consentito")
-            } else if (console.log("Negato"));
+            
+            if (userMail.value == mails[i]) {
+                allowed = true;
+            } 
 
+        }
+
+        if (allowed) {
+            resultEl.innerText = "Access allowed";
+            resultEl.style.backgroundColor = "green"
+        } else {
+            resultEl.innerText = "Access denied";
+            resultEl.style.backgroundColor ="red"
         }
     }
 )
