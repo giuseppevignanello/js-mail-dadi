@@ -16,10 +16,18 @@ let mails = [
 const userMail = prompt("Qual è la tua mail?");
 
 console.log(userMail);
-//Create a loop to check the emails. 
-    // Into the loop create an if/else to check if the user's mail is contained 
-    //If is contained print an access message 
-        //alse print a deny message 
+
+
+// create an if/else to check if the user's mail is contained 
+//If is contained print an access message 
+//else print a deny message 
+// console.log (mail)
+if (mails.includes(userMail)) {
+    console.log("Accesso consentito");
+} else {
+    console.log("Accesso negato")
+}
+
 
 
 // Tools
@@ -32,5 +40,5 @@ console.log(userMail);
 
 
 
-//GIOCO DEI DADI 
+//GIOCO DEI DADI
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
