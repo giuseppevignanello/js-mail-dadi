@@ -1,5 +1,42 @@
+body {
+    background-color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
 :root {
     --primary: #EBB80E; 
     --secondary: #B653DB;
     --tertiary: #3DDB96;
 }
+
+/* #region header */
+
+#app_header {
+    background-color: var(--secondary);
+    height: 80px;
+}
+/* #endregion header */
+
+
+/* #region main  */
+#app_main {
+
+    width: 100%;
+    color: white;
+}
+
+.jumbotron {
+    width: 70%;
+    margin: auto;
+    background-color: var(--tertiary);
+}
+
+/* #endregion main  */

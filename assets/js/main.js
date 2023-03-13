@@ -35,9 +35,9 @@ submitEl.addEventListener("click",
 //else print a deny message 
 // console.log (mail)
 if (mails.includes(userMail.value)) {
-    resultEl.innerText = "Accesso consentito";
+    resultEl.innerText = "Access allowed";
 } else {
-    resultEl.innerText = "Accesso negato";
+    resultEl.innerText = "Access denied";
 }
 
 }
