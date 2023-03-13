@@ -3,8 +3,19 @@
 
 //Create an array with allowed emails 
 
+let mails = [
+    'peppe.vignanello@gmail.com',
+    'pinco.pallino@virgilio.it',
+    'mario.rossi@gmail.com',
+    "marco.bianchi22@gmail.com",
+    "francesco.verdi33@libero.it"
+];
+
 //Ask to user email with a prompt. console.log. 
 
+const userMail = prompt("Qual è la tua mail?");
+
+console.log(userMail);
 //Create a loop to check the emails. 
     // Into the loop create an if/else to check if the user's mail is contained 
     //If is contained print an access message 
